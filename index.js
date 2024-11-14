@@ -16,4 +16,4 @@ app.get('/comparison', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server is runing on port ${port}`)
-});
+})
