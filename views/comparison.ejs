@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>การเปรียบเทียบโครงการ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+      * {
+        font-family: "Kanit", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        background: linear-gradient(to bottom, #ffffff, #4fc4f0);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      .scroll-up {
+        position: fixed;
+        right: 0.5%;
+        bottom: 3%;
+        cursor: pointer;
+      }
+
+      .custom-font-size {
+        font-size: 15px !important;
+        border-radius: 10px;
+      }
+
+      .custom-icon-size {
+        font-size: 27.5px;
+      }
+
+      .img-icon {
+        width: 30px;
+        height: 30px;
+        left: 2.5%;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      .img-icon-add {
+        width: 40px !important;
+        height: 40px !important;
+      }
+
+      .img-list {
+        width: 70px;
+        height: 70px;
+      }
+
+      .font-green {
+        color: #1B8655 !important;
+      }
+
+      .bg-white {
+        /* background-color: #d27d56 !important; */
+        background-color: #F7D1B6 !important;
+      }
+
+      /* sanitary */
+      .bg-blue {
+        background-color: #E0F6FF !important;
+      }
+
+      .bg-purple {
+        background-color: #FFECF7 !important;
+      }
+
+      .bg-yellow {
+        background-color: #FFFEE0 !important;
+      }
+
+      .bg-greenmixwhite {
+        background-color: #F0FFF8 !important;
+      }
+
+      .img-list-break {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+      }
+
+      .img-list-bedroom {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+      }
+
+      .img-list-bathroom {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+      }
+
+      .img-list-garage {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+      }
+
+      .custom-div {
+        display: inline-block;
+      }
+
+      .flex-1 {
+        display: block;
+      }
+
+      .flex-2 {
+        display: block;
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mt-3"></div>
+      <div class="d-flex justify-content-between">
+        <div
+          class="bg-success px-2 py-3 text-light bg-gradient custom-font-size"
+        >
+          ตารางเปรียบเทียบโครงการ
+        </div>
+        <a href="/" class="text-light text-decoration-none"
+          ><div class="bg-primary px-2 py-3 bg-gradient custom-font-size">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-caret-left-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+              /></svg
+            >กลับหน้าหลัก
+          </div></a
+        >
+      </div>
+      <div class="mt-3"></div>
+      <div id="comparison"></div>
+      <div class="mt-5"></div>
+    </div>
+    <i class="scroll-up" id="scroll-up"
+      ><svg
+        style="width: 50; height: 50"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-arrow-up-circle-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"
+        /></svg
+    ></i>
+    <script>
+      const scrollUp = document.querySelector("#scroll-up");
+
+      scrollUp.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const projects =
+          JSON.parse(localStorage.getItem("selectedProjects")) || [];
+        if (projects.length > 0) {
+          displayComparison(projects);
+        } else {
+          alert("ไม่มีโปรเจ็กต์ให้เปรียบเทียบ");
+        }
+
+        function displayComparison(projects) {
+          let comparisonTable = `
+            <table class="table table-bordered" id="comparisonTable">
+              <thead>
+                <tr>
+                  <th class="text-center bg-success bg-gradient text-light">รายการ</th>
+                  ${projects
+                    .map(
+                      (project) =>
+                        `<th class="text-center bg-greenmixwhite font-green">${project.name}</th>`
+                    )
+                    .join("")}
+                </tr>
+              </thead>
+              <tbody>
+          `;
+
+          const allItems = new Set();
+          projects.forEach((project) => {
+            project.items.forEach((item) => {
+              allItems.add(item.item);
+            });
+          });
+
+          let rowIndex = 0;
+          allItems.forEach((item) => {
+            let rowClass = "";
+            if (rowIndex >= 0 && rowIndex < 6) {
+              rowClass = "bg-white";
+            } else if (rowIndex >= 6 && rowIndex < 14) {
+              rowClass = "bg-blue";
+            } else if (rowIndex >= 12 && rowIndex < 22) {
+              rowClass = "bg-purple";
+            } else if (rowIndex >= 22 && rowIndex < 24) {
+              rowClass = "bg-yellow";
+            } else if (rowIndex >= 22 && rowIndex < 30) {
+              rowClass = "bg-white";
+            } else if (rowIndex >= 30 && rowIndex < 35) {
+              rowClass = "bg-blue";
+            } else if (rowIndex >= 35 && rowIndex < 51) {
+              rowClass = "bg-purple";
+            } else if (rowIndex >= 51 && rowIndex < 60) {
+              rowClass = "bg-yellow";       
+            }
+
+            comparisonTable += `<tr class="${rowClass}"><td class="text-center ${rowClass}">${item}</td>`;
+            projects.forEach((project) => {
+              const projectItem = project.items.find((i) => i.item === item);
+              if (projectItem) {
+                const hasItemIcon =
+                  projectItem.hasItem === "มี"
+                    ? '<i class="fa-solid fa-circle-check text-success custom-icon-size"></i>'
+                    : '<i class="fa-solid fa-circle-xmark text-danger custom-icon-size"></i>';
+                comparisonTable += `
+                  <td class="text-center">
+                    ${rowIndex < 14 ? "" : hasItemIcon} <br>
+                    ${projectItem.spec}
+                  </td>
+                `;
+              } else {
+                comparisonTable += `
+                  <td class="text-center">
+                    ${
+                      rowIndex < 4
+                        ? ""
+                        : '<i class="fa-solid fa-circle-xmark text-danger custom-icon-size"></i>'
+                    }
+                  </td>
+                `;
+              }
+            });
+            comparisonTable += `</tr>`;
+            rowIndex++;
+          });
+
+          comparisonTable += `
+              </tbody>
+            </table>
+          `;
+
+          document.getElementById("comparison").innerHTML = comparisonTable;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,3075 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CHECKLIST FORM</title>
+    <script
+      src="https://kit.fontawesome.com/bf5f0b5667.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+      .custom-icon-size {
+        font-size: 25px;
+      }
+
+      * {
+        font-family: "Kanit", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        background-color: #3167b1;
+        /* background-color: #6495ed; */
+      }
+
+      .body-bg-color {
+        background-color: #3167b1;
+        /* background-color: #6495ed; */
+      }
+
+      .has-checkbox {
+        width: 25px;
+        height: 25px;
+        padding: 0;
+      }
+
+      .has-no-padding {
+        padding: 0;
+      }
+
+      .no-checkbox {
+        width: 25px;
+        height: 25px;
+        padding: 0;
+      }
+
+      .border-text-input {
+        border: 0px;
+        border-radius: 5px;
+      }
+
+      .img-icon {
+        width: 25px;
+        height: 25px;
+        left: 2.5%;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      .img-icon-add {
+        width: 30px !important;
+        height: 30px !important;
+      }
+
+      .img-list {
+        width: 60px;
+        height: 60px;
+      }
+
+      .img-list-break {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+      }
+
+      .font-size-form {
+        font-size: 10px !important;
+      }
+
+      .item-name {
+        padding: 0;
+      }
+
+      .center-checkbox-spec {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 3px;
+      }
+
+      .display-flex {
+        display: flex;
+      }
+
+      .flex-1 {
+        flex: 1;
+        max-width: 40%;
+      }
+
+      .flex-2 {
+        flex: 2;
+        margin-top: 10px;
+      }
+
+      input::placeholder {
+        font-size: 12px;
+      }
+
+      .bg-color-header {
+        background-color: #eaf7ff !important;
+      }
+
+      .img-icon-added {
+        width: 40px !important;
+        height: 40px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mt-5"></div>
+    <div id="navbar" class="container-fluid">
+      <h1 class="text-center">
+        <span class="fs-4 text-light fw-bold">
+          เริ่มสร้างฟอร์ม Checklist ก่อนซื้อบ้านของคุณ
+          เพื่อเปรียบเทียบข้อมูลกันเลย!</span
+        >
+      </h1>
+    </div>
+    <div class="mt-5"></div>
+    <div id="form" class="container">
+      <form
+        id="specForm"
+        class="border p-3 bg-light"
+        style="border-radius: 20px"
+      >
+        <div id="projectNameInput">
+          <label for="projectName"
+            >ชื่อโครงการ: <br />
+            Project:
+          </label>
+          <input id="projectName" class="form-control" type="text" />
+        </div>
+        <div class="mt-3"></div>
+        <div class="mt-3"></div>
+        <div id="systemInput" class="font-size-form">
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-color-header"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseEight"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseEight"
+                >
+                  ข้อมูลแบบบ้าน Project Information
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseEight"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <div id="projectInfoInput">
+                    <div class="row row-cols-2 text-center">
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/fxntCC4/house-10043152.jpg"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+                              <span class="ms-3"> </span>
+                              <img
+                                class="img-icon-add"
+                                src="https://i.ibb.co/fxntCC4/house-10043152.jpg"
+                                alt=""
+                              />
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">ราคาบ้าน House Price</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="price"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder=" ราคาบ้าน"
+                        />
+                      </div>
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/L6MwPc5/image.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+                              <span class="ms-3"> </span>
+                              <img
+                                class="img-icon-add"
+                                src="https://i.ibb.co/L6MwPc5/image.png"
+                                alt=""
+                              />
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">พื้นที่ใช้สอย Living Area</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="area"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder=" พื้นที่ใช้สอย"
+                        />
+                      </div>
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/QPX5P6p/image.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+                              <span class="ms-3"> </span>
+
+                              <img
+                                class="img-icon-add"
+                                src="https://i.ibb.co/QPX5P6p/image.png"
+                                alt=""
+                              />
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">ห้องนอน Bedroom</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="bedroom"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder="ห้องนอน"
+                        />
+                      </div>
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/kBv1p50/image.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+                              <span class="ms-3"> </span>
+
+                              <img
+                                class="img-icon-add"
+                                src="https://i.ibb.co/kBv1p50/image.png"
+                                alt=""
+                              />
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">ห้องน้ำ Bathroom</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="bathroom"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder="ห้องน้ำ"
+                        />
+                      </div>
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/sJDdmkn/car-1634207.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+                              <span class="ms-3"> </span>
+
+                              <img
+                                class="img-icon-add"
+                                src="https://i.ibb.co/sJDdmkn/car-1634207.png"
+                                alt=""
+                              />
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">ที่จอดรถ Garage</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="parking"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder="ที่จอดรถ"
+                        />
+                      </div>
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/j6hRqpv/cleaning-9567085.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">ห้องแม่บ้าน Maid Room</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="maid"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder="ห้องแม่บ้าน"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-color-header"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  โครงสร้าง Structural
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseOne"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <div id="projectInfoInput">
+                    <div class="row row-cols-2 text-center">
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/sJDdmkn/car-1634207.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+                              
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">โครงสร้างทั่วไป (ฐานราก เสา คาน)</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="price"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder=" โครงสร้างทั่วไป (ฐานราก เสา คาน)"
+                        />
+                      </div>
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/sJDdmkn/car-1634207.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2"> โครงสร้างพื้นชั้นล่าง </div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="area"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder=" โครงสร้างพื้นชั้นล่าง "
+                        />
+                      </div>
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/sJDdmkn/car-1634207.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+                              <span class="ms-3"> </span>
+
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">โครงหลังคา</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="bedroom"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder="โครงหลังคา"
+                        />
+                      </div>
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/sJDdmkn/car-1634207.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+                              <span class="ms-3"> </span>
+
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">วัสดุมุงหลังคา</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="bathroom"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder="วัสดุมุงหลังคา"
+                        />
+                      </div>
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/sJDdmkn/car-1634207.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+                              
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">โครงสร้างที่จอดรถ</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="parking"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder="โครงสร้างที่จอดรถ"
+                        />
+                      </div>
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/sJDdmkn/car-1634207.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">โครงสร้างซักล้าง</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="maid"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder="โครงสร้างซักล้าง"
+                        />
+                      </div>
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/sJDdmkn/car-1634207.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">ครีบกันดินทรุด</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="maid"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder="ครีบกันดินทรุด"
+                        />
+                      </div>
+                      <div class="col my-1 position-relative row-input">
+                        <img
+                          class="position-absolute img-icon"
+                          src="https://i.ibb.co/sJDdmkn/car-1634207.png"
+                          alt=""
+                        />
+                        <div class="d-none item-name">
+                          <div class="display-flex">
+                            <div class="flex-1">
+
+                              <span class="ms-3"> </span>
+                            </div>
+                            <div class="flex-2">เสาเข็ม</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          class="has-checkbox d-none"
+                          name=""
+                          id=""
+                          checked
+                        />
+                        <input
+                          id="maid"
+                          type="text"
+                          class="form-control bg-body-secondary bg-gradient text-center border-text-input disabled-false"
+                          placeholder="เสาเข็ม"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-color-header"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree"
+                >
+                <img
+                    class="img-icon-added"
+                    src="https://i.ibb.co/jTJcPYS/utiltty.png"
+                    alt=""
+                  />
+                  <span class="ms-1">งานทั่วไป Utiltty</span>
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseThree"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <div class="row row-cols-4 text-center">
+                    <div class="col-6">รายการ</div>
+                    <div class="col-1 has-no-padding">มี</div>
+                    <div class="col-1 has-no-padding">ไม่มี</div>
+                    <div class="col-4">สเปก</div>
+                  </div>
+                  <hr />
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/HDzRLG4/waranty5-removebg-preview.png"
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ตู้ไปรษณีย์ <br class="display-none" />Mailbox
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/hHTbzCY/Rubbish-Bin-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ถังขยะ<br />
+                          Rubbish Bin
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/Sx9vyy1/Kitchen-Furniture-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ชุดครัวไทย<br />
+                          Kitchen Furniture
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/1KvtR1b/Kitchen-Countertops-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          อุปกรณ์ชุดครัว<br />
+                          Kitchen Countertops
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/cwyPmSZ/Shower-Enclosures-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ฉากกั้นอาบน้ำ<br />
+                          Shower Enclosures
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/Xktj154/Gardening-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          งานจัดสวน'<br />
+                          Gardening
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/M2n9T7C/Roof-Gutters-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          รางน้ำรอบบ้าน'<br />
+                          Roof Gutters
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/jzbVH6v/Pantry.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ชุดครัวเตรียมอาหาร'<br />
+                          Pantry
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-color-header"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFour"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseFour"
+                >
+                <img
+                    class="img-icon-added"
+                    src="https://i.ibb.co/Nym4pkS/defect-warranty-removebg-preview.png"
+                    alt=""
+                  />
+                  <span class="ms-1">การรับประกัน Defect Warranty</span>
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseFour"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <div class="row row-cols-4 text-center">
+                    <div class="col-6">รายการ</div>
+                    <div class="col-1 has-no-padding">มี</div>
+                    <div class="col-1 has-no-padding">ไม่มี</div>
+                    <div class="col-4">สเปก</div>
+                  </div>
+                  <hr />
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/HDzRLG4/waranty5-removebg-preview.png"
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ประกันโครงสร้าง 5 ปี่ <br class="display-none" />Structural Defects 5 years
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/bQTzPxn/waranty1-removebg-preview.png"
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ประกันงานสถาปัตยกรรม 1 ปี<br />Non-Structural Defects 1 years
+                          Order trap
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>        
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-color-header"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseTwo"
+                >
+                  <img
+                    class="img-icon-added"
+                    src="https://i.ibb.co/z2wq5Wd/sports-and-competition.png"
+                    alt=""
+                  />
+                  <span class="ms-1">สุขาภิบาล Sanitary</span>
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseTwo"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <div class="row row-cols-4 text-center">
+                    <div class="col-6">รายการ</div>
+                    <div class="col-1 has-no-padding">มี</div>
+                    <div class="col-1 has-no-padding">ไม่มี</div>
+                    <div class="col-4">สเปก</div>
+                  </div>
+                  <hr />
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/4d0dQMK/Septic-Tank-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ถังบำบัดน้ำเสีย <br class="display-none" />Septic Tank
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img class="img-list"
+                          src="https://i.ibb.co/tM4tZRF/Order-Trap-removebg-preview.png"
+                          alt="">
+                        </div>
+                        <div class="flex-2">
+                          บ่อพักดักกลิ่น<br />
+                          Order trap
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/DGvhtVK/Grase-Trap-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ถังดักไขมัน<br />
+                          Grase Trap
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/9qRY10T/Water-Tank-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          แทงค์น้ำ<br />
+                          Water Tank
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/rHgkzkW/Water-Pump-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ปั้มน้ำอัตโนมัติ<br />
+                          Water Pump
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/YZhY5xg/Pipe-Termites-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ระบบท่อปลวก<br />
+                          Pipe Termites
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-color-header"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFive"
+                >
+                  <img
+                    class="img-icon-added"
+                    src="https://i.ibb.co/Tcq3szd/roof-1.png"
+                    alt=""
+                  />
+                  <span class="ms-1">หลังคา Roofing</span>
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseFive"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <div class="row row-cols-4 text-center">
+                    <div class="col-6">รายการ</div>
+                    <div class="col-1 has-no-padding">มี</div>
+                    <div class="col-1 has-no-padding">ไม่มี</div>
+                    <div class="col-4">สเปก</div>
+                  </div>
+                  <hr />
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/dpvJcdX/Solar-Roof-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          หลังคาโซลาร์เซลล์ <br />Solar Roof
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/nws2DVH/Fiberglass-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ฉนวนกันความร้อน Stay Cool<br />
+                          Fiberglass Insulation
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/42ZyBnk/Roof-Tile-Ventilator-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ระบบระบายความร้อนใต้หลังคา<br />
+                          Roof Tile Ventilator
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/PjkvV9f/Reflector-insulation-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          แผ่นสะท้อนความร้อน<br />
+                          Reflector Insulation
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/KyCC3Wn/Roof-Ventilation-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ฝ้าระบายอากาศเหนือฝ้าชายคา<br />
+                          Roof Ventilation
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-color-header"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseSix"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseSix"
+                >
+                  <img
+                    class="img-icon-added"
+                    src="https://i.ibb.co/6mTcFxf/meter.png"
+                    alt=""
+                  />
+                  <span class="ms-1">ไฟฟ้า Electrical</span>
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseSix"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <div class="row row-cols-4 text-center">
+                    <div class="col-6">รายการ</div>
+                    <div class="col-1 has-no-padding">มี</div>
+                    <div class="col-1 has-no-padding">ไม่มี</div>
+                    <div class="col-4">สเปก</div>
+                  </div>
+                  <hr />
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/BncjX9F/Artboard-9-copy-4-4x.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          มิเตอร์ไฟฟ้า<br />
+                          Electric Meter
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/fpHynGW/Main-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          เมนเบรกเกอร์ไฟ<br />
+                          Main Breaker
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/M5QJyP7/Residual-Current-Device-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ระบบป้องกันไฟดูด<br />
+                          Residual Current Device
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/Yt32tnC/Ev-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          เครื่องชาร์ทรถยนต์ไฟฟ้า<br />
+                          EV Charger
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/f0kB6xh/Emergency-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ไฟฉุกเฉิน<br />
+                          Emergency Light
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/Z1mz7bx/Door-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          มอเตอร์ประตูรั้ว<br />
+                          Door Automatic
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/nnTydvQ/RCDs1-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          เบรกเกอร์กันดูดชั้นชั้น 1 <br />RCDs Breaker for 1st floor
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/hF0wGgL/RCDs2-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          เบรกเกอร์กันดูดชั้น 2 <br />RCDs Breaker for second floor
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/QcK9cT0/Door-Bell-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          กริ่งบ้าน <br /> Door Bell
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/QMZg6SW/Switch-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ปรั๊กไฟ สวิตซ์ <br />
+                          Switch-Plug
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/gV3NnmP/Air-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ระบบปรับอากาศ <br />
+                          Air Conditioner
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/LrCBwhB/Water-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          ระบบน้ำอุ่น/น้ำร้อน <br />
+                          Water Heater
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/Fh4BC1R/Fiber-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          สาย Fiber Optic <br />
+                          Fiber Optic Cable
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list-break"
+                            src="https://i.ibb.co/R4btY2Q/LAN-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          สาย LAN <br />
+                          LAN Cable
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+                  <div class="row row-cols-4 mb-1 row-input">
+                    <div class="col-6 item-name">
+                      <div class="display-flex">
+                        <div class="flex-1">
+                          <img
+                            class="img-list"
+                            src="https://i.ibb.co/5WBRx1k/Earth-removebg-preview.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="flex-2">
+                          บ่อกราวน์ <br />
+                          Earth Pit
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="has-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-1 center-checkbox-spec">
+                      <input
+                        type="checkbox"
+                        class="no-checkbox"
+                        name=""
+                        id=""
+                        onclick="toggleInput(this)"
+                      />
+                    </div>
+                    <div class="col-4 center-checkbox-spec">
+                      <input
+                        type="text"
+                        style="width: 100%"
+                        class="border-text-input bg-body-secondary bg-gradient"
+                      />
+                    </div>
+                  </div>
+              </div>
+            </div>
+            </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+          
+            class="accordion-button collapsed bg-color-header"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseSeven"
+            aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseSeven"
+          >  
+          <img
+                    class="img-icon-added"
+                    src="https://i.ibb.co/yP0mxcH/living-solution-removebg-preview-1.png"
+                    alt=""
+                  />
+            <span class="ms-1">นวัตกรรม Living Solution</span>
+          </button>
+        
+        </h2>
+        <div
+          id="panelsStayOpen-collapseSeven"
+          class="accordion-collapse collapse"
+        >
+          <div class="accordion-body">
+            <div class="row row-cols-4 text-center">
+              <div class="col-6">รายการ</div>
+              <div class="col-1 has-no-padding">มี</div>
+              <div class="col-1 has-no-padding">ไม่มี</div>
+              <div class="col-4">สเปก</div>
+            </div>
+            <hr />
+            <div class="row row-cols-4 mb-1 row-input">
+              <div class="col-6 item-name">
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <img
+                    class="img-list"
+                    src="https://i.ibb.co/268pqqD/Smart-removebg-preview.png"
+                    alt=""
+                  />
+                  </div>
+                  <div class="flex-2">
+                    ระบบสมาทร์โฮม <br />Smart Home
+                  </div>
+                </div>
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="has-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="no-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-4 center-checkbox-spec">
+                <input
+                  type="text"
+                  style="width: 100%"
+                  class="border-text-input bg-body-secondary bg-gradient"
+                />
+              </div>
+            </div>
+            <div class="row row-cols-4 mb-1 row-input">
+              <div class="col-6 item-name">
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <img
+                            class="img-list"
+                            src="https://i.ibb.co/m9KYbdH/Heat-removebg-preview.png"
+                            alt=""
+                          />
+                  </div>
+                  <div class="flex-2">
+                    เครื่องตรวจจับความร้อน<br />
+                    Heat Detector
+                  </div>
+                </div>
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="has-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="no-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-4 center-checkbox-spec">
+                <input
+                  type="text"
+                  style="width: 100%"
+                  class="border-text-input bg-body-secondary bg-gradient"
+                />
+              </div>
+            </div>
+            <div class="row row-cols-4 mb-1 row-input">
+              <div class="col-6 item-name">
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <img
+                    class="img-list"
+                    src="https://i.ibb.co/DYhYrKr/Smoke-removebg-preview.png"
+                    alt=""
+                  />
+                  </div>
+                  <div class="flex-2">
+                    เครื่องตรวจจับควัน<br />
+                    Smoke Detector
+                  </div>
+                </div>
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="has-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="no-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-4 center-checkbox-spec">
+                <input
+                  type="text"
+                  style="width: 100%"
+                  class="border-text-input bg-body-secondary bg-gradient"
+                />
+              </div>
+            </div>
+            <div class="row row-cols-4 mb-1 row-input">
+              <div class="col-6 item-name">
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <img
+                            class="img-list"
+                            src="https://i.ibb.co/PGhRWS7/Security-removebg-preview.png"
+                            alt=""
+                          />
+                  </div>
+                  <div class="flex-2">
+                    ระบบรักษาความปลอดภัย<br />
+                    Security Home System
+                  </div>
+                </div>
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="has-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="no-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-4 center-checkbox-spec">
+                <input
+                  type="text"
+                  style="width: 100%"
+                  class="border-text-input bg-body-secondary bg-gradient"
+                />
+              </div>
+            </div>
+            <div class="row row-cols-4 mb-1 row-input">
+              <div class="col-6 item-name">
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <img
+                            class="img-list"
+                            src="https://i.ibb.co/GxFjVzy/CCTV-removebg-preview.png"
+                            alt=""
+                          />
+                  </div>
+                  <div class="flex-2">
+                    กล้องวงจรปิด<br />
+                    CCTV Camera
+                  </div>
+                </div>
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="has-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="no-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-4 center-checkbox-spec">
+                <input
+                  type="text"
+                  style="width: 100%"
+                  class="border-text-input bg-body-secondary bg-gradient"
+                />
+              </div>
+            </div>
+            <div class="row row-cols-4 mb-1 row-input">
+              <div class="col-6 item-name">
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <img
+                            class="img-list"
+                            src="https://i.ibb.co/Nx0Ddy6/Door-removebg-preview.png"
+                            alt=""
+                          />
+                  </div>
+                  <div class="flex-2">
+                    ประตูอัตโนมัติโรงรถ<br />
+                    Automatic Garage Door
+                  </div>
+                </div>
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="has-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="no-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-4 center-checkbox-spec">
+                <input
+                  type="text"
+                  style="width: 100%"
+                  class="border-text-input bg-body-secondary bg-gradient"
+                />
+              </div>
+            </div>
+            <div class="row row-cols-4 mb-1 row-input">
+              <div class="col-6 item-name">
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <img
+                            class="img-list"
+                            src="https://i.ibb.co/x8133W4/Glass-removebg-preview.png"
+                            alt=""
+                          />
+                  </div>
+                  <div class="flex-2">
+                    กระจกเขียวตัดแสง<br />
+                    Green Glass
+                  </div>
+                </div>
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="has-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="no-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-4 center-checkbox-spec">
+                <input
+                  type="text"
+                  style="width: 100%"
+                  class="border-text-input bg-body-secondary bg-gradient"
+                />
+              </div>
+            </div>
+            <div class="row row-cols-4 mb-1 row-input">
+              <div class="col-6 item-name">
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <img
+                            class="img-list"
+                            src="https://i.ibb.co/FsF7R8z/App-removebg-preview.png"
+                            alt=""
+                          />
+                  </div>
+                  <div class="flex-2">
+                    Application ตัวบ้าน<br />
+                    House Application
+                  </div>
+                </div>
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="has-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="no-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-4 center-checkbox-spec">
+                <input
+                  type="text"
+                  style="width: 100%"
+                  class="border-text-input bg-body-secondary bg-gradient"
+                />
+              </div>
+            </div>
+            <div class="row row-cols-4 mb-1 row-input">
+              <div class="col-6 item-name">
+                <div class="display-flex">
+                  <div class="flex-1">
+                    <img
+                            class="img-list"
+                            src="https://i.ibb.co/TvXm1Vs/Air-removebg-preview.png"
+                            alt=""
+                          />
+                  </div>
+                  <div class="flex-2">
+                    ระบบกรองอากาศในบ้าน<br />
+                    Air Quality
+                  </div>
+                </div>
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="has-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-1 center-checkbox-spec">
+                <input
+                  type="checkbox"
+                  class="no-checkbox"
+                  name=""
+                  id=""
+                  onclick="toggleInput(this)"
+                />
+              </div>
+              <div class="col-4 center-checkbox-spec">
+                <input
+                  type="text"
+                  style="width: 100%"
+                  class="border-text-input bg-body-secondary bg-gradient"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+
+        <div class="mt-3"></div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary bg-gradient">
+            Submit
+          </button>
+        </div>
+      </form>
+      <div class="mt-3"></div>
+      <div id="listProjects">
+        <div
+          class="bg-success bg-gradient text-light text-center px-3 py-2"
+          style="width: 100px; border-radius: 10px"
+        >
+          โครงการ
+        </div>
+        <div id="datas"></div>
+      </div>
+      <div class="mt-3"></div>
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item body-bg-color" style="border: 0">
+          <h2 class="accordion-header body-bg-color">
+            <button
+              style="border-radius: 30px; width: 300px"
+              class="accordion-button bg-success bg-gradient text-light"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseNine"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseNine"
+            >
+              เปรียบเทียบโครงการที่คุณสนใจ
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseNine"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body p-1 mt-2">
+              <div class="border p-3 bg-light" style="border-radius: 20px">
+                <div
+                  id="displayComparisonCheckbox"
+                  class="row row-cols-2"
+                ></div>
+                <div class="mb-3"></div>
+                <div class="d-flex justify-content-between">
+                  <button
+                    id="clearCheckboxBtn"
+                    class="btn btn-danger bg-gradient"
+                  >
+                    ล้าง
+                  </button>
+                  <button id="compareBtn" class="btn btn-primary bg-gradient">
+                    เปรียบเทียบ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-3"></div>
+      <div class="mb-3"></div>
+      <div id="comparison"></div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document.getElementById("price").addEventListener("blur", function () {
+        let value = this.value.trim();
+        if (value && !value.endsWith("บาท")) {
+          this.value = `${value.replace(/ บาท$/, "")} บาท`;
+        }
+      });
+      document.getElementById("area").addEventListener("blur", function () {
+        let value = this.value.trim();
+        if (value && !value.endsWith("ตร.ม")) {
+          this.value = `${value.replace(/ ตร.ม$/, "")} ตร.ม`;
+        }
+      });
+      document.getElementById("bedroom").addEventListener("blur", function () {
+        let value = this.value.trim();
+        if (value && !value.endsWith("ห้อง")) {
+          this.value = `${value.replace(/ ห้อง$/, "")} ห้อง`;
+        }
+      });
+      document.getElementById("bathroom").addEventListener("blur", function () {
+        let value = this.value.trim();
+        if (value && !value.endsWith("ห้อง")) {
+          this.value = `${value.replace(/ ห้อง$/, "")} ห้อง`;
+        }
+      });
+      document.getElementById("parking").addEventListener("blur", function () {
+        let value = this.value.trim();
+        if (value && !value.endsWith("คัน")) {
+          this.value = `${value.replace(/ คัน$/, "")} คัน`;
+        }
+      });
+      document.getElementById("maid").addEventListener("blur", function () {
+        let value = this.value.trim();
+        if (value && !value.endsWith("ห้อง")) {
+          this.value = `${value.replace(/ ห้อง$/, "")} ห้อง`;
+        }
+      });
+    </script>
+    <script>
+      function toggleInput(checkbox) {
+        const row = checkbox.closest(".row");
+        const hasCheckbox = row.querySelector(".has-checkbox");
+        const noCheckbox = row.querySelector(".no-checkbox");
+        const input = row.querySelector(".border-text-input");
+
+        if (checkbox === hasCheckbox) {
+          noCheckbox.checked = false;
+          // input.disabled = !hasCheckbox.checked;
+          if (!hasCheckbox.checked) {
+            input.value = "";
+          }
+        } else if (checkbox === noCheckbox) {
+          hasCheckbox.checked = false;
+          // input.disabled = true;
+          input.value = "";
+        }
+      }
+
+      function deleteProject(projectId) {
+        let projects = JSON.parse(localStorage.getItem("projects")) || [];
+        projects = projects.filter((project) => project.id !== projectId);
+        localStorage.setItem("projects", JSON.stringify(projects));
+        // document.getElementById(projectId).remove();
+        const deleteTargets = document.querySelectorAll(`.${projectId}`);
+        deleteTargets.forEach((target) => {
+          if (target) {
+            target.remove();
+          }
+        });
+        window.location.reload();
+      }
+
+      document
+        .getElementById("specForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const projectName = document.getElementById("projectName").value;
+          const rows = document.querySelectorAll("#specForm .row-input");
+          const projectId = `project-${new Date().getTime()}`;
+
+          let projectData = {
+            id: projectId,
+            name: projectName,
+            items: [],
+          };
+
+          rows.forEach((row) => {
+            // const item = row.cells[0].innerText;
+            const item = row.querySelector(".item-name").innerHTML;
+            const hasItem = row.querySelector(".has-checkbox").checked
+              ? "มี"
+              : "ไม่มี";
+            const spec = row.querySelector(".border-text-input").value;
+            // const spec = row.cells[3].querySelector("input").value;
+
+            projectData.items.push({ item, hasItem, spec });
+          });
+
+          let projects = JSON.parse(localStorage.getItem("projects")) || [];
+          projects.push(projectData);
+          localStorage.setItem("projects", JSON.stringify(projects));
+
+          addProjectToDOM(projectData);
+          document.getElementById("specForm").reset();
+          // document.querySelectorAll(".border-text-input").forEach((element) => {
+          //   element.disabled = true;
+          // });
+          // document.querySelectorAll(".disabled-false").forEach((element) => {
+          //   element.disabled = false;
+          // });
+        });
+
+      function clearCheckboxesInDiv() {
+        const div = document.getElementById("displayComparisonCheckbox");
+        const checkboxes = div.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(function (checkbox) {
+          checkbox.checked = false;
+        });
+      }
+
+      document
+        .getElementById("clearCheckboxBtn")
+        .addEventListener("click", clearCheckboxesInDiv);
+
+      document
+        .getElementById("compareBtn")
+        .addEventListener("click", compareProjects);
+
+      function compareProjects() {
+        const selectedProjects = [];
+        document
+          .querySelectorAll(
+            "#displayComparisonCheckbox .form-check-input:checked"
+          )
+          .forEach((checkbox) => {
+            const projectId = checkbox.value;
+            const projects = JSON.parse(localStorage.getItem("projects")) || [];
+            const project = projects.find((p) => p.id === projectId);
+            if (project) {
+              selectedProjects.push(project);
+            }
+          });
+
+        if (selectedProjects.length > 0) {
+          localStorage.setItem(
+            "selectedProjects",
+            JSON.stringify(selectedProjects)
+          );
+          window.location.href = "/comparison";
+        } else {
+          alert("กรุณาเลือกโปรเจ็กต์เพื่อเปรียบเทียบ");
+        }
+      }
+
+      function displayComparison(projects) {
+        let comparisonTable = `
+  <table class="table table-bordered" id="comparisonTable">
+    <thead>
+      <tr>
+        <th>รายการ</th>
+        ${projects.map((project) => `<th>${project.name}</th>`).join("")}
+      </tr>
+    </thead>
+    <tbody>
+  `;
+
+        const allItems = new Set();
+        projects.forEach((project) => {
+          project.items.forEach((item) => {
+            allItems.add(item.item);
+          });
+        });
+
+        allItems.forEach((item) => {
+          comparisonTable += `<tr><td>${item}</td>`;
+          projects.forEach((project) => {
+            const projectItem = project.items.find((i) => i.item === item);
+            if (projectItem) {
+              comparisonTable += `
+          <td>
+            ${projectItem.hasItem} <br>
+            ${projectItem.spec}
+          </td>
+        `;
+            } else {
+              comparisonTable += `<td>ไม่มี</td>`;
+            }
+          });
+          comparisonTable += `</tr>`;
+        });
+
+        comparisonTable += `
+    </tbody>
+  </table>
+
+  `;
+
+        document.getElementById("comparison").innerHTML = comparisonTable;
+      }
+
+      function addProjectToDOM(projectData) {
+        // const bedroomValue = document.getElementById("bedroom").value;
+        // const bathroomValue = document.getElementById("bathroom").value;
+        // const areaValue = document.getElementById("area").value;
+        // const parkingValue = document.getElementById("parking").value;
+        let data = `
+        <div class="card mt-3" id="${projectData.id}">
+          <div class="card-header d-flex justify-content-between align-items-center" id="heading${projectData.id}">
+            <h5 class="mb-0">
+              <button class="btn btn-link text-decoration-none text-secondary" type="button" data-toggle="collapse" data-target="#collapse${projectData.id}" aria-expanded="true" aria-controls="collapse${projectData.id}">
+                     <img style="height: 50px; width: 50px;" src="https://i.ibb.co/0ffpTsm/house-236878.png" alt="">  ${projectData.name}
+              </button>
+            </h5>
+            <button class="btn btn-danger btn-sm" onclick="deleteProject('${projectData.id}')">ลบ</button>
+          </div>
+          <div id="collapse${projectData.id}" class="collapse" aria-labelledby="heading${projectData.id}" data-parent="#datas">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>รายการ</th>
+                    <th>มี</th>
+                    <th>ไม่มี</th>
+                    <th>สเปค</th>
+                  </tr>
+                </thead>
+                <tbody>
+      `;
+
+        projectData.items.forEach((itemData) => {
+          data += `
+          <tr>
+            <td>${itemData.item}</td>
+            <td>${itemData.hasItem === "มี" ? "✔" : ""}</td>
+            <td>${itemData.hasItem === "ไม่มี" ? "✔" : ""}</td>
+            <td style="word-break: break-all;">${itemData.spec}</td>
+          </tr>
+        `;
+        });
+
+        data += `
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      `;
+
+        document.getElementById("datas").innerHTML += data;
+
+        const comparisonData = `
+          <div class="form-check text-center position-relative" id="${projectData.id}">
+            <input style="left: 22.5%;" class="form-check-input position-absolute" type="checkbox" value="${projectData.id}" id="compare-${projectData.id}">
+            <label class="form-check-label" for="compare-${projectData.id}">
+              ${projectData.name}
+            </label>
+          </div>
+          `;
+        document.getElementById("displayComparisonCheckbox").innerHTML +=
+          comparisonData;
+      }
+
+      function loadProjects() {
+        let projects = JSON.parse(localStorage.getItem("projects")) || [];
+        projects.forEach(addProjectToDOM);
+      }
+
+      document.addEventListener("DOMContentLoaded", loadProjects);
+    </script>
+  </body>
+</html>
