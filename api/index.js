@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
 const path = require("path");
 
 app.set('view engine', 'ejs');
@@ -14,6 +13,7 @@ app.get('/comparison', (req, res) => {
     res.render('comparison')
 });
 
-app.listen(port, () => {
-    console.log(`Server is runing on port ${port}`)
-});
+// สร้าง handler สำหรับ Vercel serverless function
+module.exports = (req, res) => {
+    app(req, res);
+};
