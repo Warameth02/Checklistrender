@@ -7,11 +7,11 @@ app.set('view engine', 'ejs');
 app.set("views", path.join(__dirname, "/views"));
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index.ejs')
 });
 
 app.get('/comparison', (req, res) => {
-    res.render('comparison')
+    res.render('comparison.ejs')
 });
 
 app.listen(port, () => {
